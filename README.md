@@ -13,7 +13,8 @@ A arquitetura foi construída seguindo as boas práticas do AWS Well-Architected
 ### **Diagrama da Arquitetura**
 A arquitetura é representada no seguinte diagrama:
 
-![Diagrama da Arquitetura AWS]()
+![Diagrama da Arquitetura AWS](images
+/Diagrama desafio Ec2 AWS.jpg)
 
 ---
 
