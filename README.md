@@ -1,7 +1,7 @@
 # desafio-code-girls-one-ec2
 Documentação e anotações do desafio de AWS EC2 da DIO. Este repositório serve como material de apoio para consolidar e demonstrar o aprendizado sobre o gerenciamento de instâncias EC2.
 
-### **README: Projeto de Arquitetura AWS para Aplicação de Ponto de Venda (PDV)**
+### **Projeto de Arquitetura AWS para Aplicação de Ponto de Venda (PDV)**
 
 #### **Visão Geral**
 Este projeto documenta uma arquitetura de referência para uma aplicação de Ponto de Venda (PDV) na nuvem AWS. O objetivo principal é criar uma solução que seja **altamente disponível**, **escalável** e **segura**, capaz de lidar com picos de tráfego e garantir a resiliência em caso de falhas.
