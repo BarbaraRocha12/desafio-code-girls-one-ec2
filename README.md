@@ -6,8 +6,6 @@ Documentação e anotações do desafio de AWS EC2 da DIO. Este repositório ser
 ### **Fluxo de Upload de Arquivo na AWS com EC2, EBS e RDS**
 O diagrama abaixo representa o fluxo de um upload de arquivo para a nuvem AWS, usando uma instância EC2 (Elastic Compute Cloud) que é do tipo IAAS (Infrastructure as a Service) para receber o arquivo. Ele é salvo em um volume EBS (Elastic Block Store) que é uma storage altamente confiável, enquanto seus metadados são armazenados em um banco de dados RDS (Relational Database Service). A arquitetura demonstra um uso combinado de serviços de infraestrutura e gerenciamento de dados da AWS.
 
----
-
 ### **Diagrama da Arquitetura**
 A arquitetura é representada no seguinte diagrama:
 
@@ -39,7 +37,6 @@ A arquitetura é representada no seguinte diagrama:
 
 ![Diagrama da Arquitetura AWS](images/code-s3.png)
 
----
 
 ### **Componentes da Arquitetura**
 
@@ -50,7 +47,6 @@ A arquitetura é representada no seguinte diagrama:
 | **Lambda** | É o serviço de computação serverless que é acionado por **eventos** ,como o **(S3)**, para processar o arquivo . |
 | **DynamoDb (Banco de dados NoSql)** | É o banco de dados onde os dados já processados são armazenados de forma persistente. |
 
----
 
 ### **Fluxo de Dados**
 1.  É feito o upload de um arquivo do **sistema local do usuário** para um **bucket S3**, utilizando a interface de linha de comando **AWS CLI**.
@@ -67,14 +63,12 @@ Este projeto documenta uma arquitetura de referência para uma aplicação de Po
 
 A arquitetura foi construída seguindo as boas práticas do AWS Well-Architected Framework, utilizando serviços gerenciados para simplificar a operação e otimizar custos.
 
----
 
 ### **Diagrama da Arquitetura**
 A arquitetura é representada no seguinte diagrama:
 
 ![Diagrama da Arquitetura AWS](images/desafio-Ec2AWS.jpg)
 
----
 
 ### **Componentes da Arquitetura**
 
@@ -91,7 +85,6 @@ A arquitetura é representada no seguinte diagrama:
 | **Banco RDS (Multi-AZ)** | É o serviço de banco de dados gerenciado pela AWS. A configuração **Multi-AZ** cria uma réplica automática em uma AZ diferente, garantindo alta disponibilidade e failover rápido em caso de falha da instância primária. |
 | **Security Groups** | Agem como firewalls virtuais, controlando o tráfego de entrada e saída de cada componente. Eles garantem que apenas a aplicação possa se comunicar com o banco de dados. |
 
----
 
 ### **Fluxo de Dados**
 1.  O tráfego dos usuários entra na **VPC** através do **Internet Gateway**.
