@@ -1,6 +1,14 @@
 # desafio-code-girls-one-ec2
 Documentação e anotações do desafio de AWS EC2 da DIO. Este repositório serve como material de apoio para consolidar e demonstrar o aprendizado sobre o gerenciamento de instâncias EC2.
 
+### **Fluxo de Upload de Arquivo na AWS com EC2, EBS e RDS**
+O diagrama abaixo representa o fluxo de um upload de arquivo para a nuvem AWS, usando uma instância EC2 (Elastic Compute Cloud) que é do tipo IAAS (Infrastructure as a Service) para receber o arquivo. Ele é salvo em um volume EBS (Elastic Block Store) que é uma storage altamente confiável, enquanto seus metadados são armazenados em um banco de dados RDS (Relational Database Service). A arquitetura demonstra um uso combinado de serviços de infraestrutura e gerenciamento de dados da AWS.
+
+### **Diagrama da Arquitetura**
+A arquitetura é representada no seguinte diagrama:
+
+![Diagrama da Arquitetura AWS]()
+
 ### **Projeto de Arquitetura AWS para Aplicação de Ponto de Venda (PDV)**
 
 #### **Visão Geral**
