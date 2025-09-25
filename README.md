@@ -1,8 +1,12 @@
-# desafio-code-girls-one-ec2
+# desafio-code-girls-AWS-ec2
 Documentação e anotações do desafio de AWS EC2 da DIO. Este repositório serve como material de apoio para consolidar e demonstrar o aprendizado sobre o gerenciamento de instâncias EC2.
+
+---
 
 ### **Fluxo de Upload de Arquivo na AWS com EC2, EBS e RDS**
 O diagrama abaixo representa o fluxo de um upload de arquivo para a nuvem AWS, usando uma instância EC2 (Elastic Compute Cloud) que é do tipo IAAS (Infrastructure as a Service) para receber o arquivo. Ele é salvo em um volume EBS (Elastic Block Store) que é uma storage altamente confiável, enquanto seus metadados são armazenados em um banco de dados RDS (Relational Database Service). A arquitetura demonstra um uso combinado de serviços de infraestrutura e gerenciamento de dados da AWS.
+
+---
 
 ### **Diagrama da Arquitetura**
 A arquitetura é representada no seguinte diagrama:
@@ -35,6 +39,8 @@ A arquitetura é representada no seguinte diagrama:
 
 ![Diagrama da Arquitetura AWS](images/code-s3.png)
 
+---
+
 ### **Componentes da Arquitetura**
 
 | Componente | Função |
@@ -44,12 +50,15 @@ A arquitetura é representada no seguinte diagrama:
 | **Lambda** | É o serviço de computação serverless que é acionado por **eventos** ,como o **(S3)**, para processar o arquivo . |
 | **DynamoDb (Banco de dados NoSql)** | É o banco de dados onde os dados já processados são armazenados de forma persistente. |
 
+---
 
 ### **Fluxo de Dados**
 1.  É feito o upload de um arquivo do **sistema local do usuário** para um **bucket S3**, utilizando a interface de linha de comando **AWS CLI**.
 2.  O armazenamento do arquivo no ** bucket S3** gera um **evento** que funciona como um **gatilho (trigger)**. Esse gatilho ativa a função **Lambda** automaticamente.
 3.  A função **Lambda** é executada para processar o arquivo que foi recebido do ** bucket S3**.
 4.  Após o processamento, a função **Lambda** armazena os dados resultantes no banco de dados **DynamoDB** para que sejam persistidos e possam ser consultados futuramente.
+
+---
 
 ### **Projeto de Arquitetura AWS para Aplicação de Ponto de Venda (PDV)**
 
