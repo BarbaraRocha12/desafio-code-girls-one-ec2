@@ -31,7 +31,7 @@ Esse arquivo é armazenado em um **bucket S3 (Simple Storage Service)**, um serv
 ### **Diagrama de Arquitetura**
 A arquitetura é representada no seguinte diagrama:
 
-![Diagrama da Arquitetura AWS]()
+![Diagrama da Arquitetura AWS](images/code-s3.png)
 
 ### **Projeto de Arquitetura AWS para Aplicação de Ponto de Venda (PDV)**
 
