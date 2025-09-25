@@ -24,6 +24,15 @@ A arquitetura é representada no seguinte diagrama:
 3.  O arquivo é salvo no volume **EBS**, garantindo que o dado seja armazenado de forma persistente e segura.
 4.  Ocorre o armazenamento dos metadados no banco de dados **RDS**, facilitando a organização e futura consulta.
 
+### **Fluxo de Processamento de Arquivos com S3, Lambda e DynamoDB**
+O diagrama abaixo representa o **fluxo de upload** de um arquivo para a nuvem através da interface **AWS CLI (Command Line Interface)** que permite a interação dos serviços **AWS (Amazon Web Services)** diretamente terminal. 
+Esse arquivo é armazenado em um **bucket S3 (Simple Storage Service)**, um serviço de armazenamento de objetos, projetado para guardar e recuperar qualquer quantidade de dados, de qualquer lugar, a qualquer momento. Esse **evento** dispara um **gatilho (trigger)**, que aciona a função **Lambda**. O **Lambda** executa o código escrito que processa os dados, que são por fim armazenados e mantidos de forma persistente no banco de dados **DynamoDB**.
+
+### **Diagrama de Arquitetura**
+A arquitetura é representada no seguinte diagrama:
+
+![Diagrama da Arquitetura AWS]()
+
 ### **Projeto de Arquitetura AWS para Aplicação de Ponto de Venda (PDV)**
 
 #### **Visão Geral**
