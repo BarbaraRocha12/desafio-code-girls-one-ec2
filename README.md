@@ -7,7 +7,7 @@ O diagrama abaixo representa o fluxo de um upload de arquivo para a nuvem AWS, u
 ### **Diagrama da Arquitetura**
 A arquitetura é representada no seguinte diagrama:
 
-![Diagrama da Arquitetura AWS]()
+![Diagrama da Arquitetura AWS](images/code-ec2.jpg)
 
 ### **Projeto de Arquitetura AWS para Aplicação de Ponto de Venda (PDV)**
 
