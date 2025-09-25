@@ -33,6 +33,15 @@ A arquitetura é representada no seguinte diagrama:
 
 ![Diagrama da Arquitetura AWS](images/code-s3.png)
 
+### **Componentes da Arquitetura**
+
+| Componente | Função |
+| :--- | :--- |
+| **AWS CLI (Command Line Interface)** | É a interface de linha de comando usada para fazer o upload de arquivos para a nuvem diretamente do terminal. |
+| **S3 (Simple Storage Service)** | É o serviço de armazenamento de objetos que recebe o arquivo e atua como ponto de entrada do fluxo. |
+| **Lambda** | É o serviço de computação serverless que é acionado por **eventos** ,como o **(S3)**, para processar o arquivo . |
+| **DynamoDb (Banco de dados NoSql)** | É o banco de dados onde os dados já processados são armazenados de forma persistente. |
+
 ### **Projeto de Arquitetura AWS para Aplicação de Ponto de Venda (PDV)**
 
 #### **Visão Geral**
