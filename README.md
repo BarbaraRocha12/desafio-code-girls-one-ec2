@@ -24,6 +24,8 @@ A arquitetura é representada no seguinte diagrama:
 3.  O arquivo é salvo no volume **EBS**, garantindo que o dado seja armazenado de forma persistente e segura.
 4.  Ocorre o armazenamento dos metadados no banco de dados **RDS**, facilitando a organização e futura consulta.
 
+---
+
 ### **Fluxo de Processamento de Arquivos com S3, Lambda e DynamoDB**
 O diagrama abaixo representa o **fluxo de upload** de um arquivo para a nuvem através da interface **AWS CLI (Command Line Interface)** que permite a interação dos serviços **AWS (Amazon Web Services)** diretamente terminal. 
 Esse arquivo é armazenado em um **bucket S3 (Simple Storage Service)**, um serviço de armazenamento de objetos, projetado para guardar e recuperar qualquer quantidade de dados, de qualquer lugar, a qualquer momento. Esse **evento** dispara um **gatilho (trigger)**, que aciona a função **Lambda**. O **Lambda** executa o código escrito que processa os dados, que são por fim armazenados e mantidos de forma persistente no banco de dados **DynamoDB**.
@@ -41,6 +43,13 @@ A arquitetura é representada no seguinte diagrama:
 | **S3 (Simple Storage Service)** | É o serviço de armazenamento de objetos que recebe o arquivo e atua como ponto de entrada do fluxo. |
 | **Lambda** | É o serviço de computação serverless que é acionado por **eventos** ,como o **(S3)**, para processar o arquivo . |
 | **DynamoDb (Banco de dados NoSql)** | É o banco de dados onde os dados já processados são armazenados de forma persistente. |
+
+
+### **Fluxo de Dados**
+1.  É feito o upload de um arquivo do **sistema local do usuário** para um **bucket S3**, utilizando a interface de linha de comando **AWS CLI**.
+2.  O armazenamento do arquivo no ** bucket S3** gera um **evento** que funciona como um **gatilho (trigger)**. Esse gatilho ativa a função **Lambda** automaticamente.
+3.  A função **Lambda** é executada para processar o arquivo que foi recebido do ** bucket S3**.
+4.  Após o processamento, a função **Lambda** armazena os dados resultantes no banco de dados **DynamoDB** para que sejam persistidos e possam ser consultados futuramente.
 
 ### **Projeto de Arquitetura AWS para Aplicação de Ponto de Venda (PDV)**
 
