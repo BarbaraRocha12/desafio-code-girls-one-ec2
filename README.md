@@ -18,6 +18,11 @@ A arquitetura é representada no seguinte diagrama:
 | **RDS (Relational Databasde Service** | É um serviço Amazon Web Services (AWS) que simplifica o gerenciamento de banco de dados relacionais na nuvem . |
 | **EBS (Elastic Block Store)** | É um serviço de armazenamento da Amazon Web Services que fornece volumes de disco persistente para as instâncias EC2 . |
 
+### **Fluxo de Dados**
+1.  É iniciado o processo de **Upload do arquivo do usuário** a partir de um dispositivo.
+2.  A **Instância EC2** recebe o arquivo, atuando como servidor que processa o upload.
+3.  O arquivo é salvo no volume **EBS**, garantindo que o dado seja armazenado de forma persistente e segura.
+4.  Ocorre o armazenamento dos metadados no banco de dados **RDS**, facilitando a organização e futura consulta.
 
 ### **Projeto de Arquitetura AWS para Aplicação de Ponto de Venda (PDV)**
 
