@@ -9,6 +9,16 @@ A arquitetura é representada no seguinte diagrama:
 
 ![Diagrama da Arquitetura AWS](images/code-ec2.jpg)
 
+### **Componentes da Arquitetura**
+
+| Componente | Função |
+| :--- | :--- |
+| **EC2 (Elastic Compute Cloud)** | É do tipo IAAS (Infrastructure as a Service), uma máquina virtual na nuvem composta por uma CPU, memória, dico, rede e um sistema operacional. |
+| **Internet Gateway** | Permite que o tráfego da internet entre na sua VPC, atuando como o ponto de entrada principal. |
+| **RDS (Relational Databasde Service** | É um serviço Amazon Web Services (AWS) que simplifica o gerenciamento de banco de dados relacionais na nuvem . |
+| **EBS (Elastic Block Store)** | É um serviço de armazenamento da Amazon Web Services que fornece volumes de disco persistente para as instâncias EC2 . |
+
+
 ### **Projeto de Arquitetura AWS para Aplicação de Ponto de Venda (PDV)**
 
 #### **Visão Geral**
